@@ -1,5 +1,6 @@
-FROM openjdk:8-jdk-alpine
+FROM java:8-jdk-alpine
 COPY ./helloWorld/initial/target/helloWorld.war /usr/app/
-WORKDIR /user/app
+WORKDIR /usr/app
 EXPOSE 8080
-ENTRYPOINT [ "java" , "-jar", "helloWorld.war"]
+RUN apk update && apk add bash
+ENTRYPOINT [ "java","-jar", "helloWorld.war"]
