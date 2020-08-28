@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: helloWorld
+    namespace: default
+spec:
+    replicas: 2
+    selector:
+        matchLabels:
+            app: web
+    template:
+        metadata:
+            labels:
+                app: web
+        spec:
+            containers:
+                - name: helloWorld
+                  image: *TODO: FILL*
+                  ports:
+                    - containerPort: 8080

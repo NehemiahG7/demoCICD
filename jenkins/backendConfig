@@ -1,0 +1,3 @@
+      bucket = "cicd-demo-jenkins"
+      key = "jenkins/tfstate"
+      region = "us-east-1"
